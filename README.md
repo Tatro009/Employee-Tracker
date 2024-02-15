@@ -11,7 +11,7 @@ Employee Tracker is a command-line application built with Node.js, Inquirer, and
 
 ## Installation
 
-1. Clone the repository: git clone https://github.com/yourusername/employee-tracker.git
+1. Clone the repository: git clone https://github.com/Tatro009/employee-tracker.git
 2. Navigate to the project directory: cd employee-tracker
 3. Install dependencies: npm install
 4. Set up your MySQL database and update the connection configuration in db/db.js.
