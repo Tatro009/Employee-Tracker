@@ -1,9 +1,8 @@
-// db.js
 const mysql = require('mysql2');
 
 // Create a connection pool
 const pool = mysql.createPool({
-  host: 'localhost',
+  host: 'localhost3306',
   user: 'root',
   password: '',
   database: 'employee_db',

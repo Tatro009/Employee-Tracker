@@ -11,7 +11,18 @@ async function getAllEmployees() {
     }
 }
 
-// Export the functions
+async function addEmployee(firstName, lastName, roleId) {
+    try {
+        const [result] = await db.query('INSERT INTO employee (first_name, last_name, role_id) VALUES (?, ?, ?)', [firstName, lastName, roleId]);
+        return result;
+    } catch (error) {
+        console.error('Error adding employee:', error);
+        throw error; // Rethrow the error to handle it in the calling function
+    }
+}
+
+// Export the addEmployee function
 module.exports = {
-    getAllEmployees
+    getAllEmployees,
+    addEmployee
 };

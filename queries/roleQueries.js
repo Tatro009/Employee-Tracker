@@ -11,7 +11,19 @@ async function getAllRoles() {
     }
 }
 
-// Export the functions
+// Function to add a role to the database
+async function addRole(title, salary, departmentId) {
+    try {
+        const [result] = await db.query('INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?)', [title, salary, departmentId]);
+        return result;
+    } catch (error) {
+        console.error('Error adding role:', error);
+        throw error; // Rethrow the error to handle it in the calling function
+    }
+}
+
+// Export both functions together
 module.exports = {
-    getAllRoles
+    getAllRoles,
+    addRole
 };
