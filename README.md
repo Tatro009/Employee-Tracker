@@ -32,26 +32,6 @@ Exit
 
 Follow the prompts to perform desired actions and manage your employee database effectively.
 
-## Database Schema
-The application expects a MySQL database with the following schema:
-
-department table
-
-id: INT PRIMARY KEY
-name: VARCHAR(30) to hold department name
-role table
-
-id: INT PRIMARY KEY
-title: VARCHAR(30) to hold role title
-salary: DECIMAL to hold role salary
-department_id: INT to hold reference to department role belongs to
-employee table
-
-id: INT PRIMARY KEY
-first_name: VARCHAR(30) to hold employee first name
-last_name: VARCHAR(30) to hold employee last name
-role_id: INT to hold reference to employee role
-
 ## Contributing
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or create a pull request.
 
